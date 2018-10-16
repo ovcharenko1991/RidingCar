@@ -1,0 +1,142 @@
+body {
+	margin: 0;
+}
+
+.window {
+	background: url(img/bg.png);
+	-webkit-background-size: cover;
+	background-size: cover;
+	height: 100vh;
+}
+
+.cloud {
+	background: url(img/cloud.png);
+	-webkit-background-size: contain;
+	background-size: contain;
+	height: 100px;
+	animation: cloud 3s infinite linear;
+}
+
+.bird {
+	margin-top: 10vh;
+	overflow: hidden;
+}
+.bird-spin {
+	height: 184px;
+	width: 184px;
+	background: url(img/bird.png);
+	animation: bird-x .5s steps(5) infinite, 
+		bird-y 2.5s steps(5) infinite,
+		bird-z 2.5s infinite linear;
+}
+
+ .car {
+ 	position: absolute;
+ 	bottom: 90px;
+ 	margin-left: calc(50% - 350px);
+ 	animation: car .5s infinite linear;
+ 	overflow: hidden;
+ }
+.car img {
+	width: 700px;
+}
+.wheel1, .wheel2 {
+	position: absolute;
+	bottom: 0;
+	animation: wheel 1s infinite linear;
+}
+.wheel1 {
+	margin-left: 50px;
+}
+.wheel2 {
+	margin-left: 488px;
+}
+.wheel1 img, .wheel2 img {
+	width: 110px;
+	height: 110px;
+}
+
+.grass {
+	position: absolute;
+	background: url(img/grass.png);
+	-webkit-background-size: contain;
+	background-size: contain;
+	height: 100px;
+	width: 100vw;
+	animation: grass 3s infinite linear;
+	bottom: 0;
+	z-index: 2;
+}
+
+@keyframes cloud {
+	0% {
+		-ms-background-position-x: 0;
+		background-position-x: 0;
+	}
+	100% {
+		-ms-background-position-x: 91%;
+		background-position-x: 91%;
+	}
+}
+
+@keyframes bird-x {
+	0% {
+		background-position-x: 0;
+	}
+	100% {
+		background-position-x: -920px;
+	}
+}
+@keyframes bird-y {
+	0% {
+		background-position-y: 0;
+	}
+	100% {
+		background-position-y: -920px;
+	}
+}
+@keyframes bird-z {
+	0% {
+		transform: translateX(100vw);
+	}
+	50% {
+		transform: translateX(0vw);
+	}
+	100% {
+		transform: translateX(130vw);
+	}
+}
+
+
+@keyframes car {
+	0% {
+		transform: translateY(30%);
+	}
+	50% {
+		transform: translateY(40%);
+	}
+	100% {
+		transform: translateY(30%);
+	}
+}
+
+@keyframes wheel {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(-360deg);
+	}
+}
+
+
+@keyframes grass {
+	0% {
+		-ms-background-position-x: 0;
+		background-position-x: 0;
+	}
+	100% {
+		-ms-background-position-x: 88%;
+		background-position-x: 88%;
+	}
+}
